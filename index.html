@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">AWBS Network — Optimasi Monetisasi Iklan untuk Publisher</title>
+  <meta name="description" data-i18n="meta.description" content="AWBS membantu publisher media mengoptimasi performa iklan. Kami untung hanya ketika Anda untung — tanpa kontrak jangka panjang." />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/form.js" defer></script>
+</head>
+<body>
+  <a href="#hero" class="skip-link" data-i18n="a11y.skip">Lewati ke konten utama</a>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header id="header" class="header">
+    <div class="container header__inner">
+      <a href="#hero" class="header__brand" aria-label="AWBS Network">
+        <img src="assets/logo.png" alt="AWBS Network" class="header__logo" width="150" height="34" />
+      </a>
+
+      <nav class="nav" aria-label="Navigasi utama">
+        <ul class="nav__list" id="navList">
+          <li><a href="#how" class="nav__link" data-i18n="nav.how">Cara Kerja</a></li>
+          <li><a href="#services" class="nav__link" data-i18n="nav.services">Layanan</a></li>
+          <li><a href="#why" class="nav__link" data-i18n="nav.why">Kenapa AWBS</a></li>
+          <li><a href="#proof" class="nav__link" data-i18n="nav.proof">Hasil</a></li>
+          <li><a href="#faq" class="nav__link" data-i18n="nav.faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang-switch" role="group" aria-label="Pilih bahasa">
+          <button type="button" class="lang-switch__btn is-active" data-lang="id" aria-pressed="true">ID</button>
+          <span class="lang-switch__sep" aria-hidden="true">/</span>
+          <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a href="#contact" class="btn btn--primary btn--sm header__cta" data-i18n="cta.primary">Dapatkan Evaluasi Revenue Gratis</a>
+        <button type="button" class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="navList">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="hero" class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="eyebrow" data-i18n="hero.eyebrow">AdTech yang Benar-Benar Bekerja</span>
+          <h1 class="hero__title" data-i18n="hero.title">Hasilkan lebih banyak pendapatan dari traffic yang sudah Anda miliki.</h1>
+          <p class="hero__subtitle" data-i18n="hero.subtitle">Kami mengoptimasi monetisasi iklan publisher media — dan kami untung hanya ketika Anda untung. Tanpa kontrak jangka panjang, tanpa risiko.</p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary btn--lg" data-i18n="cta.primary">Dapatkan Evaluasi Revenue Gratis</a>
+            <a href="#how" class="btn btn--ghost btn--lg" data-i18n="hero.secondary">Lihat cara kerjanya</a>
+          </div>
+          <p class="hero__note" data-i18n="hero.note">✓ Gratis &nbsp; ✓ Tanpa komitmen &nbsp; ✓ Kami tumbuh saat Anda tumbuh</p>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero-grid"></div>
+          <div class="hero-orbit hero-orbit--outer"><span></span><span></span><span></span></div>
+          <div class="hero-orbit hero-orbit--inner"><span></span><span></span></div>
+
+          <div class="signal-card signal-card--demand">
+            <span class="signal-card__icon">↗</span>
+            <span><small data-i18n="hero.signal.demand">Demand aktif</small><strong data-i18n="hero.signal.partners">8 partner</strong></span>
+          </div>
+          <div class="signal-card signal-card--shield">
+            <span class="signal-card__icon signal-card__icon--green">✓</span>
+            <span><small data-i18n="hero.signal.protection">Traffic terlindungi</small><strong>99.2%</strong></span>
+          </div>
+
+          <div class="dashboard">
+            <div class="dashboard__head">
+              <span class="dashboard__dot"></span><span class="dashboard__dot"></span><span class="dashboard__dot"></span>
+              <span class="dashboard__title" data-i18n="hero.dash.title">Revenue Intelligence</span>
+              <span class="dashboard__live"><i></i><span data-i18n="hero.dash.live">Live</span></span>
+            </div>
+            <div class="dashboard__body">
+              <div class="dashboard__toolbar">
+                <div class="dashboard__stat">
+                  <span class="dashboard__label" data-i18n="hero.dash.revenue">Pendapatan bulan ini</span>
+                  <span class="dashboard__value">Rp 128.4M</span>
+                </div>
+                <span class="dashboard__delta">▲ 47%</span>
+              </div>
+
+              <div class="chart-wrap">
+                <div class="chart-wrap__axis"><span>150M</span><span>100M</span><span>50M</span></div>
+                <svg class="chart" viewBox="0 0 420 156" preserveAspectRatio="none" role="img">
+                  <defs>
+                    <linearGradient id="heroChartGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#1C50A1" stop-opacity="0.32"/>
+                      <stop offset="100%" stop-color="#1C50A1" stop-opacity="0"/>
+                    </linearGradient>
+                    <filter id="heroChartGlow" x="-20%" y="-30%" width="140%" height="160%">
+                      <feGaussianBlur stdDeviation="3" result="blur"/>
+                      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                    </filter>
+                  </defs>
+                  <g class="chart__grid">
+                    <path d="M0 30H420M0 78H420M0 126H420"/>
+                    <path d="M70 0V156M140 0V156M210 0V156M280 0V156M350 0V156"/>
+                  </g>
+                  <path class="chart__baseline" d="M0 122 C58 118 80 110 125 112 S205 104 250 102 S340 94 420 88"/>
+                  <path class="chart__area" d="M0 132 C44 124 74 132 112 110 S174 86 212 91 S270 62 310 67 S370 36 420 24 L420 156 L0 156 Z"/>
+                  <path class="chart__line" d="M0 132 C44 124 74 132 112 110 S174 86 212 91 S270 62 310 67 S370 36 420 24" filter="url(#heroChartGlow)"/>
+                  <g class="chart__points">
+                    <circle cx="112" cy="110" r="4"/><circle cx="212" cy="91" r="4"/><circle cx="310" cy="67" r="4"/><circle cx="420" cy="24" r="5"/>
+                  </g>
+                </svg>
+                <div class="chart-tooltip"><small data-i18n="hero.dash.optimized">Revenue teroptimasi</small><strong>+Rp 43.4M</strong></div>
+              </div>
+
+              <div class="dashboard__metrics">
+                <div><span data-i18n="hero.dash.cpm">eCPM</span><strong>Rp 28.6K</strong><em>+18%</em></div>
+                <div><span data-i18n="hero.dash.fill">Fill rate</span><strong>92.8%</strong><em>+7.4%</em></div>
+                <div><span data-i18n="hero.dash.ivt">IVT diblokir</span><strong>184K</strong><em class="is-safe" data-i18n="hero.dash.safe">Aman</em></div>
+              </div>
+
+              <div class="auction-flow">
+                <div class="auction-flow__label" data-i18n="hero.dash.auction">Lelang real-time</div>
+                <div class="auction-flow__route">
+                  <span>AdX</span><i></i><span>Prebid</span><i></i><span>SSP</span>
+                  <b data-i18n="hero.dash.bestbid">Best bid</b>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST STRIP ============ -->
+    <section id="trust" class="trust">
+      <div class="container">
+        <div class="stats">
+          <div class="stat">
+            <span class="stat__value">+47%</span>
+            <span class="stat__label" data-i18n="trust.stat1">rata-rata kenaikan revenue dalam 90 hari pertama</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">120+</span>
+            <span class="stat__label" data-i18n="trust.stat2">publisher media &amp; konten bermitra</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">2.5M+</span>
+            <span class="stat__label" data-i18n="trust.stat3">impresi iklan dioptimasi tiap bulan</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">99.2%</span>
+            <span class="stat__label" data-i18n="trust.stat4">traffic invalid berhasil difilter</span>
+          </div>
+        </div>
+        <p class="trust__badges-label" data-i18n="trust.partners">Terintegrasi dengan demand premium global</p>
+        <div class="badges">
+          <span class="badge">Google Certified Partner</span>
+          <span class="badge">AdX</span>
+          <span class="badge">Prebid</span>
+          <span class="badge">Premium SSP</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section id="problem" class="section problem">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-i18n="problem.eyebrow">Kedengaran familiar?</span>
+          <h2 class="section__title" data-i18n="problem.title">Traffic Anda bagus. Tapi pendapatan iklannya belum maksimal.</h2>
+        </div>
+        <div class="cards cards--3">
+          <div class="card problem__card">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
+            </div>
+            <h3 class="card__title" data-i18n="problem.c1.title">Revenue stagnan</h3>
+            <p class="card__text" data-i18n="problem.c1.text">Pendapatan iklan terasa datar atau tidak bisa diprediksi dari bulan ke bulan.</p>
+          </div>
+          <div class="card problem__card">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+            </div>
+            <h3 class="card__title" data-i18n="problem.c2.title">Tanpa tim ad-ops</h3>
+            <p class="card__text" data-i18n="problem.c2.text">Tidak punya keahlian in-house untuk terus mengoptimasi setup iklan.</p>
+          </div>
+          <div class="card problem__card">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5v6c0 5-4 8-9 9-5-1-9-4-9-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3 class="card__title" data-i18n="problem.c3.title">Risiko traffic invalid</h3>
+            <p class="card__text" data-i18n="problem.c3.text">Khawatir invalid traffic merusak kesehatan akun dan kualitas payout Anda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section id="how" class="section how">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-i18n="how.eyebrow">Cara Kerja</span>
+          <h2 class="section__title" data-i18n="how.title">Tiga langkah. Sisanya kami yang urus.</h2>
+          <p class="section__lead" data-i18n="how.lead">Ringan untuk Anda, hasil maksimal untuk revenue Anda.</p>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">1</span>
+            <h3 class="step__title" data-i18n="how.s1.title">Hubungkan</h3>
+            <p class="step__text" data-i18n="how.s1.text">Integrasikan properti Anda dengan AWBS. Cepat, tanpa mengganggu operasional.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">2</span>
+            <h3 class="step__title" data-i18n="how.s2.title">Kami optimasi</h3>
+            <p class="step__text" data-i18n="how.s2.text">Header bidding, proteksi IVT, dan tuning ad-ops kami jalankan untuk Anda.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">3</span>
+            <h3 class="step__title" data-i18n="how.s3.title">Anda hasilkan lebih</h3>
+            <p class="step__text" data-i18n="how.s3.text">Pantau kenaikan revenue lewat analytics transparan — kami untung saat Anda untung.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="section services">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-i18n="services.eyebrow">Layanan</span>
+          <h2 class="section__title" data-i18n="services.title">Teknologi + keahlian untuk memaksimalkan tiap impresi</h2>
+        </div>
+        <div class="cards cards--2">
+          <div class="card service">
+            <div class="card__icon card__icon--accent" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="7"/><rect x="12" y="6" width="3" height="11"/><rect x="17" y="13" width="3" height="4"/></svg>
+            </div>
+            <h3 class="card__title" data-i18n="services.s1.title">Header Bidding</h3>
+            <p class="card__text" data-i18n="services.s1.text">Integrasi demand premium global sehingga lebih banyak pengiklan bersaing di tiap impresi — CPM dan pendapatan naik.</p>
+          </div>
+          <div class="card service">
+            <div class="card__icon card__icon--accent" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5v6c0 5-4 8-9 9-5-1-9-4-9-9V7z"/></svg>
+            </div>
+            <h3 class="card__title" data-i18n="services.s2.title">Proteksi IVT</h3>
+            <p class="card__text" data-i18n="services.s2.text">Filter canggih terhadap traffic invalid, berkualitas rendah, dan otomatis — menjaga kesehatan akun dan kualitas payout.</p>
+          </div>
+          <div class="card service">
+            <div class="card__icon card__icon--accent" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+            </div>
+            <h3 class="card__title" data-i18n="services.s3.title">Analytics Mendalam</h3>
+            <p class="card__text" data-i18n="services.s3.text">Lacak performa dan pendapatan lintas banyak dimensi, metrik, dan rentang tanggal — transparansi dan kontrol penuh.</p>
+          </div>
+          <div class="card service">
+            <div class="card__icon card__icon--accent" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+            </div>
+            <h3 class="card__title" data-i18n="services.s4.title">Layanan Optimasi</h3>
+            <p class="card__text" data-i18n="services.s4.text">Keahlian ad-ops langsung diterapkan pada setup Anda — pertumbuhan revenue berkelanjutan tanpa kerja ekstra.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY AWBS ============ -->
+    <section id="why" class="section why">
+      <div class="container why__inner">
+        <div class="why__content">
+          <span class="eyebrow eyebrow--light" data-i18n="why.eyebrow">Model Kemitraan</span>
+          <h2 class="section__title" data-i18n="why.title">Kami untung hanya ketika Anda untung.</h2>
+          <p class="section__lead" data-i18n="why.lead">Begitulah seharusnya sebuah kemitraan. Insentif kita sejalan sepenuhnya — jadi fokus kami satu: menumbuhkan pendapatan Anda.</p>
+          <ul class="checklist">
+            <li data-i18n="why.p1">Berbasis performa — kami tumbuh saat Anda tumbuh</li>
+            <li data-i18n="why.p2">Tanpa kontrak jangka panjang, tanpa lock-in</li>
+            <li data-i18n="why.p3">Transparan — Anda lihat dari mana tiap rupiah berasal</li>
+            <li data-i18n="why.p4">Spesialis ad-ops sungguhan, bukan sekadar tool</li>
+          </ul>
+          <a href="#contact" class="btn btn--accent btn--lg" data-i18n="cta.primary">Dapatkan Evaluasi Revenue Gratis</a>
+        </div>
+        <div class="why__visual" aria-hidden="true">
+          <div class="partnership-visual">
+            <div class="partnership-visual__grid"></div>
+            <div class="partnership-orbit partnership-orbit--one"><i></i><i></i></div>
+            <div class="partnership-orbit partnership-orbit--two"><i></i></div>
+
+            <div class="partnership-panel">
+              <div class="partnership-panel__head">
+                <div>
+                  <span class="partnership-panel__eyebrow" data-i18n="why.case.label">Studi kasus (ilustrasi)</span>
+                  <strong data-i18n="why.visual.title">Mesin pertumbuhan bersama</strong>
+                </div>
+                <span class="partnership-panel__status"><i></i><span data-i18n="why.visual.status">Insentif selaras</span></span>
+              </div>
+
+              <div class="partnership-chart">
+                <div class="partnership-chart__summary">
+                  <span data-i18n="why.visual.revenue">Revenue publisher</span>
+                  <strong>Rp 128M</strong>
+                  <em>+50.6%</em>
+                </div>
+                <div class="partnership-chart__legend">
+                  <span><i></i><span data-i18n="why.visual.baseline">Baseline</span></span>
+                  <span><i></i><span data-i18n="why.visual.optimized">Setelah optimasi</span></span>
+                </div>
+                <svg viewBox="0 0 430 156" role="presentation">
+                  <defs>
+                    <linearGradient id="partnershipArea" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#5B8DE0" stop-opacity=".38"/>
+                      <stop offset="1" stop-color="#5B8DE0" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="partnershipLine" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0" stop-color="#76A7F1"/>
+                      <stop offset="1" stop-color="#7FE0A0"/>
+                    </linearGradient>
+                  </defs>
+                  <g class="partnership-chart__gridlines">
+                    <path d="M12 25H418M12 68H418M12 111H418M12 150H418"/>
+                    <path d="M12 12V150M113 12V150M214 12V150M315 12V150M418 12V150"/>
+                  </g>
+                  <path class="partnership-chart__baseline" d="M12 116 C98 112 151 115 214 110 S334 108 418 105"/>
+                  <path class="partnership-chart__area" d="M12 116 C68 111 105 101 148 93 S221 78 263 67 S345 44 418 19 L418 150 L12 150Z"/>
+                  <path class="partnership-chart__line" d="M12 116 C68 111 105 101 148 93 S221 78 263 67 S345 44 418 19"/>
+                  <g class="partnership-chart__points">
+                    <circle cx="12" cy="116" r="4"/><circle cx="148" cy="93" r="4"/><circle cx="263" cy="67" r="4"/><circle cx="418" cy="19" r="6"/>
+                  </g>
+                </svg>
+                <div class="partnership-chart__months"><span data-i18n="why.case.before">Sebelum</span><span data-i18n="why.visual.month1">Bulan 1</span><span data-i18n="why.visual.month2">Bulan 2</span><span data-i18n="why.case.after">Sesudah 3 bulan</span></div>
+              </div>
+
+              <div class="alignment-flow">
+                <div class="alignment-node alignment-node--publisher">
+                  <span class="alignment-node__mark">P</span>
+                  <span><small data-i18n="why.visual.publisher">Publisher</small><strong data-i18n="why.visual.publisherResult">Revenue bertumbuh</strong></span>
+                </div>
+                <div class="alignment-flow__link"><i></i><span>+50.6%</span></div>
+                <div class="alignment-node alignment-node--awbs">
+                  <span class="alignment-node__mark">A</span>
+                  <span><small>AWBS</small><strong data-i18n="why.visual.awbsResult">Berhasil saat Anda tumbuh</strong></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="partnership-chip partnership-chip--transparent">
+              <span class="partnership-chip__icon">◎</span>
+              <span><small data-i18n="why.visual.reporting">Reporting</small><strong data-i18n="why.visual.transparent">100% transparan</strong></span>
+            </div>
+            <div class="partnership-chip partnership-chip--flexible">
+              <span class="partnership-chip__icon">↗</span>
+              <span><small data-i18n="why.visual.commitment">Komitmen</small><strong data-i18n="why.visual.nolock">Tanpa lock-in</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROOF ============ -->
+    <section id="proof" class="section proof">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow" data-i18n="proof.eyebrow">Hasil Nyata</span>
+          <h2 class="section__title" data-i18n="proof.title">Dipercaya para publisher</h2>
+        </div>
+        <div class="cards cards--3">
+          <figure class="testimonial">
+            <blockquote data-i18n="proof.t1.quote">"Revenue iklan kami naik lebih dari 40% dalam dua bulan, dan kami tidak perlu repot sama sekali."</blockquote>
+            <figcaption><strong data-i18n="proof.t1.name">Rina W.</strong><span data-i18n="proof.t1.role">Head of Revenue, [Media Publisher]</span></figcaption>
+          </figure>
+          <figure class="testimonial">
+            <blockquote data-i18n="proof.t2.quote">"Akhirnya ada partner iklan yang transparan. Kami bisa melihat persis dari mana tiap rupiah berasal."</blockquote>
+            <figcaption><strong data-i18n="proof.t2.name">Andi S.</strong><span data-i18n="proof.t2.role">Founder, [News Site]</span></figcaption>
+          </figure>
+          <figure class="testimonial">
+            <blockquote data-i18n="proof.t3.quote">"Proteksi IVT-nya saja sudah menyelamatkan akun AdSense kami. Sangat direkomendasikan."</blockquote>
+            <figcaption><strong data-i18n="proof.t3.name">Dewi K.</strong><span data-i18n="proof.t3.role">Operations Lead, [Content Network]</span></figcaption>
+          </figure>
+        </div>
+        <p class="proof__disclaimer" data-i18n="proof.disclaimer">*Angka dan testimoni di atas adalah data placeholder untuk keperluan ilustrasi.</p>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="section faq">
+      <div class="container faq__layout">
+        <div class="faq__intro">
+          <span class="eyebrow" data-i18n="faq.eyebrow">Pertanyaan Umum</span>
+          <h2 class="section__title" data-i18n="faq.title">Sebelum mulai, ini yang biasanya ingin diketahui publisher.</h2>
+          <p class="section__lead" data-i18n="faq.lead">Tidak menemukan jawaban Anda? Tim kami siap membahas setup dan potensi revenue situs Anda.</p>
+          <a href="#contact" class="faq__link" data-i18n="faq.contact">Bicarakan kebutuhan Anda <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="faq__list">
+          <details class="faq__item" open>
+            <summary><span data-i18n="faq.q1">Apa yang termasuk dalam evaluasi revenue gratis?</span><i aria-hidden="true"></i></summary>
+            <div class="faq__answer"><p data-i18n="faq.a1">Kami meninjau setup iklan, pola traffic, peluang demand, dan area yang berpotensi menahan pendapatan. Anda mendapat gambaran peluang dan rekomendasi awal tanpa kewajiban bermitra.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary><span data-i18n="faq.q2">Apakah integrasi AWBS akan mengganggu website?</span><i aria-hidden="true"></i></summary>
+            <div class="faq__answer"><p data-i18n="faq.a2">Integrasi dirancang bertahap dan diawasi oleh tim ad-ops. Kami menguji implementasi, performa iklan, dan pengalaman pengguna sebelum melakukan optimasi lebih lanjut.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary><span data-i18n="faq.q3">Publisher seperti apa yang cocok bekerja sama dengan AWBS?</span><i aria-hidden="true"></i></summary>
+            <div class="faq__answer"><p data-i18n="faq.a3">Kami paling relevan untuk publisher media dan konten dengan traffic aktif yang ingin meningkatkan yield, memperluas demand, atau menjalankan ad-ops tanpa membangun tim internal sendiri.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary><span data-i18n="faq.q4">Bagaimana model biaya atau bagi hasilnya?</span><i aria-hidden="true"></i></summary>
+            <div class="faq__answer"><p data-i18n="faq.a4">Model kerja sama berbasis performa dan dibahas transparan setelah evaluasi. Struktur komersial disesuaikan dengan kondisi properti, stack iklan, dan ruang optimasi masing-masing publisher.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary><span data-i18n="faq.q5">Apakah ada kontrak jangka panjang?</span><i aria-hidden="true"></i></summary>
+            <div class="faq__answer"><p data-i18n="faq.a5">Tidak ada lock-in jangka panjang. Ruang lingkup, target, akses data, dan mekanisme penghentian kerja sama disepakati dengan jelas sejak awal.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary><span data-i18n="faq.q6">Apakah saya tetap bisa melihat data performa iklan?</span><i aria-hidden="true"></i></summary>
+            <div class="faq__answer"><p data-i18n="faq.a6">Ya. Transparansi adalah bagian utama kemitraan: Anda tetap dapat memantau metrik, tren pendapatan, dan dampak optimasi melalui reporting yang disepakati bersama.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA / CONTACT ============ -->
+    <section id="contact" class="section contact">
+      <div class="container contact__inner">
+        <div class="contact__copy">
+          <h2 class="section__title" data-i18n="contact.title">Cari tahu berapa banyak pendapatan yang Anda tinggalkan.</h2>
+          <p class="section__lead" data-i18n="contact.lead">Dapatkan evaluasi revenue gratis untuk situs Anda. Tanpa biaya, tanpa komitmen — hanya insight yang bisa langsung ditindaklanjuti.</p>
+        </div>
+        <form class="lead-form" id="leadForm" novalidate>
+          <div class="field">
+            <label for="name" data-i18n="contact.form.name">Nama</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+            <span class="field__error" data-error-for="name"></span>
+          </div>
+          <div class="field">
+            <label for="email" data-i18n="contact.form.email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+            <span class="field__error" data-error-for="email"></span>
+          </div>
+          <div class="field">
+            <label for="website" data-i18n="contact.form.website">Website / properti</label>
+            <input type="url" id="website" name="website" required placeholder="https://" />
+            <span class="field__error" data-error-for="website"></span>
+          </div>
+          <button type="submit" class="btn btn--accent btn--lg btn--block" data-i18n="contact.form.submit">Minta Evaluasi Gratis</button>
+          <p class="lead-form__success" id="formSuccess" hidden data-i18n="contact.form.success">Terima kasih! Tim kami akan menghubungi Anda dalam 1×24 jam.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="footer" class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo-white.png" alt="AWBS Network" class="footer__logo" width="160" height="35" />
+        <p class="footer__tagline" data-i18n="footer.tagline">AdTech yang benar-benar bekerja. Kami menang hanya ketika Anda menang.</p>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.company.title">Perusahaan</h4>
+        <p>PT Andiantara Sinergi Hagoon</p>
+        <p data-i18n="footer.company.address">Yogyakarta, Indonesia</p>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.links.title">Tautan</h4>
+        <a href="#services" data-i18n="nav.services">Layanan</a>
+        <a href="#why" data-i18n="nav.why">Kenapa AWBS</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" data-i18n="footer.links.contact">Kontak</a>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.contact.title">Hubungi Kami</h4>
+        <a href="mailto:hello@awbs.io">hello@awbs.io</a>
+        <a href="https://awbs.io" target="_blank" rel="noopener">awbs.io</a>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <span data-i18n="footer.copyright">© 2026 AWBS Network. Seluruh hak cipta dilindungi.</span>
+      <div class="footer__legal">
+        <a href="#" data-i18n="footer.privacy">Kebijakan Privasi</a>
+        <a href="#" data-i18n="footer.terms">Syarat &amp; Ketentuan</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
