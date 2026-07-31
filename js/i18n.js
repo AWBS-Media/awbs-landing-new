@@ -5,8 +5,10 @@
 
 const I18N = {
   id: {
-    "meta.title": "AWBS Network: Optimasi Monetisasi Iklan untuk Publisher",
-    "meta.description": "AWBS membantu publisher media mengoptimasi performa iklan. Kami untung hanya ketika Anda untung, tanpa kontrak jangka panjang.",
+    "meta.title": "Optimasi Monetisasi Iklan Publisher | AWBS Network",
+    "meta.description": "Tingkatkan pendapatan iklan situs Anda bersama AWBS Network melalui header bidding, proteksi IVT, analytics, dan optimasi ad-ops tanpa kontrak jangka panjang.",
+    "meta.locale": "id_ID",
+    "meta.imageAlt": "Logo AWBS Network",
 
     "a11y.skip": "Lewati ke konten utama",
 
@@ -146,8 +148,10 @@ const I18N = {
   },
 
   en: {
-    "meta.title": "AWBS Network: Ad Monetization Optimization for Publishers",
-    "meta.description": "AWBS helps media publishers optimize ad performance. We win only when you do, with no long-term contracts.",
+    "meta.title": "Publisher Ad Monetization Optimization | AWBS Network",
+    "meta.description": "Grow your site's ad revenue with AWBS Network through header bidding, IVT protection, analytics, and hands-on ad-ops optimization with no long-term contracts.",
+    "meta.locale": "en_US",
+    "meta.imageAlt": "AWBS Network logo",
 
     "a11y.skip": "Skip to main content",
 
