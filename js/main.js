@@ -1,11 +1,56 @@
 /* ============================================================
-   main.js — sticky header, mobile nav, smooth scroll, reveal
+   main.js — sticky header, mobile nav, smooth scroll, reveal, tema
    ============================================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("header");
   const hamburger = document.getElementById("hamburger");
   const nav = document.querySelector(".nav");
+
+  /* ---- Dark mode ----
+     Tanpa data-theme, halaman mengikuti preferensi OS lewat CSS.
+     Klik tombol menyimpan pilihan eksplisit ke localStorage. */
+  const themeToggle = document.getElementById("themeToggle");
+  const media = window.matchMedia("(prefers-color-scheme: dark)");
+
+  const storedTheme = () => {
+    try {
+      return localStorage.getItem("awbs-theme");
+    } catch (e) {
+      return null;
+    }
+  };
+
+  const activeTheme = () => storedTheme() || (media.matches ? "dark" : "light");
+
+  const syncToggleLabel = () => {
+    if (!themeToggle) return;
+    const goingDark = activeTheme() !== "dark";
+    themeToggle.setAttribute(
+      "aria-label",
+      goingDark ? "Aktifkan mode gelap" : "Aktifkan mode terang"
+    );
+  };
+
+  syncToggleLabel();
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const next = activeTheme() === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      try {
+        localStorage.setItem("awbs-theme", next);
+      } catch (e) {
+        /* localStorage diblokir: tema tetap berlaku untuk sesi ini */
+      }
+      syncToggleLabel();
+    });
+  }
+
+  // Ikuti perubahan tema OS selama user belum memilih manual
+  media.addEventListener("change", () => {
+    if (!storedTheme()) syncToggleLabel();
+  });
 
   /* ---- Sticky header shadow saat scroll ---- */
   const onScroll = () => {

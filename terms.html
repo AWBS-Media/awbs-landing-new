@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Syarat &amp; Ketentuan — AWBS Network</title>
+  <meta name="description" content="Syarat dan ketentuan penggunaan layanan monetisasi iklan AWBS Network bagi publisher mitra." />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Terapkan tema sebelum paint pertama supaya tidak ada kedip putih (FOUC) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('awbs-theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) { /* localStorage diblokir: jatuh ke preferensi OS */ }
+    })();
+  </script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Lewati ke konten utama</a>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header id="header" class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__brand" aria-label="AWBS Network">
+        <img src="assets/logo.png" alt="AWBS Network" class="header__logo header__logo--light" width="150" height="34" />
+        <img src="assets/logo-white.png" alt="" aria-hidden="true" class="header__logo header__logo--dark" width="150" height="34" />
+      </a>
+
+      <nav class="nav" aria-label="Navigasi utama">
+        <ul class="nav__list" id="navList">
+          <li><a href="index.html#how" class="nav__link">Cara Kerja</a></li>
+          <li><a href="index.html#services" class="nav__link">Layanan</a></li>
+          <li><a href="index.html#why" class="nav__link">Kenapa AWBS</a></li>
+          <li><a href="index.html#proof" class="nav__link">Hasil</a></li>
+          <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Ganti tema gelap/terang" title="Ganti tema">
+          <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4.2" />
+            <path d="M12 2v2.6M12 19.4V22M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2 12h2.6M19.4 12H22M4.2 19.8l1.9-1.9M17.9 6.1l1.9-1.9" />
+          </svg>
+          <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20.5 14.2A8.4 8.4 0 1 1 9.8 3.5a6.6 6.6 0 0 0 10.7 10.7Z" />
+          </svg>
+        </button>
+        <a href="index.html#contact" class="btn btn--primary btn--sm header__cta">Dapatkan Evaluasi Revenue Gratis</a>
+        <button type="button" class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="navList">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ LEGAL: SYARAT & KETENTUAN ============ -->
+    <section class="section legal">
+      <div class="container legal__container">
+        <a href="index.html" class="legal__back">← Kembali ke beranda</a>
+        <span class="eyebrow">Legal</span>
+        <h1 class="legal__title">Syarat &amp; Ketentuan</h1>
+        <p class="legal__updated">Terakhir diperbarui: 31 Juli 2026</p>
+
+        <div class="legal__body">
+          <p>Syarat &amp; Ketentuan ini ("Ketentuan") mengatur penggunaan layanan monetisasi iklan yang disediakan oleh AWBS Network, dioperasikan oleh PT Andiantara Sinergi Hagoon ("AWBS", "kami"). Dengan mendaftar atau menggunakan layanan kami, Anda ("Publisher", "Anda") menyetujui Ketentuan ini.</p>
+
+          <h2>1. Ruang Lingkup Layanan</h2>
+          <p>AWBS menyediakan layanan optimasi monetisasi iklan untuk properti digital milik Publisher, mencakup integrasi demand iklan, lelang real-time, proteksi traffic tidak valid (IVT), dan pelaporan revenue melalui dashboard analitik.</p>
+
+          <h2>2. Kelayakan &amp; Pendaftaran</h2>
+          <ul>
+            <li>Publisher harus memiliki hak sah atas properti digital yang didaftarkan dan bertanggung jawab atas keakuratan informasi yang diberikan.</li>
+            <li>AWBS berhak menolak atau menangguhkan pendaftaran properti yang tidak memenuhi kebijakan konten platform iklan (mis. kebijakan AdSense/Ad Exchange) atau terindikasi traffic tidak valid.</li>
+            <li>Publisher wajib memasang tag/kode integrasi sesuai instruksi teknis AWBS agar layanan berfungsi optimal.</li>
+          </ul>
+
+          <h2>3. Model Kerja Sama &amp; Pembagian Pendapatan</h2>
+          <p>AWBS beroperasi dengan model bagi hasil (revenue share): kami memperoleh pendapatan hanya dari selisih atau porsi yang disepakati atas revenue iklan yang berhasil dioptimasi, tanpa biaya di muka dan tanpa kontrak jangka panjang mengikat, kecuali disepakati lain secara tertulis. Rincian persentase dan skema pembayaran akan dikonfirmasikan secara terpisah kepada masing-masing Publisher.</p>
+
+          <h2>4. Pembayaran</h2>
+          <ul>
+            <li>Pendapatan dilaporkan secara transparan melalui dashboard dan/atau laporan berkala.</li>
+            <li>Pembayaran dilakukan sesuai siklus dan ambang batas (threshold) yang disepakati, setelah dikurangi penyesuaian akibat traffic tidak valid, chargeback dari mitra demand, atau diskrepansi lain yang wajar.</li>
+            <li>Publisher bertanggung jawab memberikan data pembayaran yang akurat; keterlambatan akibat data yang tidak valid bukan tanggung jawab AWBS.</li>
+          </ul>
+
+          <h2>5. Kewajiban Publisher</h2>
+          <ul>
+            <li>Tidak melakukan atau mendorong klik/impresi palsu, penggunaan bot, atau bentuk manipulasi traffic lainnya.</li>
+            <li>Tidak menempatkan iklan pada konten yang melanggar hukum, kebijakan platform iklan, atau hak pihak ketiga.</li>
+            <li>Segera melaporkan kepada AWBS apabila mendeteksi aktivitas mencurigakan pada properti yang terdaftar.</li>
+          </ul>
+
+          <h2>6. Proteksi Invalid Traffic (IVT)</h2>
+          <p>AWBS menerapkan sistem deteksi IVT untuk melindungi akun iklan Publisher. Traffic yang terindikasi tidak valid dapat difilter dari pelaporan dan tidak dihitung sebagai revenue yang dapat dibayarkan. AWBS tidak menjamin proteksi mutlak terhadap seluruh bentuk traffic tidak valid, namun akan menggunakan upaya wajar sesuai standar industri.</p>
+
+          <h2>7. Kekayaan Intelektual</h2>
+          <p>Seluruh teknologi, dashboard, dan materi milik AWBS tetap menjadi hak milik AWBS. Publisher memberikan izin terbatas kepada AWBS untuk menayangkan iklan pada properti terdaftar semata-mata untuk tujuan pelaksanaan layanan ini.</p>
+
+          <h2>8. Penangguhan &amp; Penghentian</h2>
+          <p>AWBS berhak menangguhkan atau menghentikan layanan pada properti yang melanggar Ketentuan ini, kebijakan platform iklan, atau ketentuan hukum yang berlaku, dengan atau tanpa pemberitahuan sebelumnya bila diperlukan untuk mencegah kerugian. Publisher dapat mengakhiri kerja sama kapan saja tanpa penalti mengingat tidak ada kontrak jangka panjang mengikat, kecuali disepakati lain.</p>
+
+          <h2>9. Batasan Tanggung Jawab</h2>
+          <p>AWBS berupaya menyediakan layanan dengan sebaik mungkin namun tidak menjamin kenaikan revenue tertentu untuk setiap Publisher, karena performa dipengaruhi oleh faktor eksternal seperti kondisi pasar iklan, kualitas traffic, dan kebijakan platform pihak ketiga. Sejauh diizinkan hukum yang berlaku, AWBS tidak bertanggung jawab atas kerugian tidak langsung yang timbul dari penggunaan layanan.</p>
+
+          <h2>10. Perubahan Ketentuan</h2>
+          <p>AWBS dapat memperbarui Ketentuan ini dari waktu ke waktu. Perubahan material akan diinformasikan melalui email atau pemberitahuan di situs sebelum berlaku efektif. Penggunaan layanan yang berlanjut setelah perubahan dianggap sebagai persetujuan atas Ketentuan yang diperbarui.</p>
+
+          <h2>11. Hukum yang Berlaku</h2>
+          <p>Ketentuan ini diatur dan ditafsirkan sesuai hukum Republik Indonesia. Setiap sengketa akan diselesaikan secara musyawarah terlebih dahulu sebelum menempuh jalur hukum yang berlaku.</p>
+
+          <h2>12. Kontak</h2>
+          <p>Pertanyaan seputar Syarat &amp; Ketentuan ini dapat disampaikan ke <a href="mailto:hello@awbs.io">hello@awbs.io</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="footer" class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo-white.png" alt="AWBS Network" class="footer__logo" width="160" height="35" />
+        <p class="footer__tagline">AdTech yang benar-benar bekerja. Insentif kami terikat pada hasil Anda.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Perusahaan</h4>
+        <p>PT Andiantara Sinergi Hagoon</p>
+        <p>Yogyakarta, Indonesia</p>
+      </div>
+      <div class="footer__col">
+        <h4>Tautan</h4>
+        <a href="index.html#services">Layanan</a>
+        <a href="index.html#why">Kenapa AWBS</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact">Kontak</a>
+      </div>
+      <div class="footer__col">
+        <h4>Hubungi Kami</h4>
+        <a href="mailto:hello@awbs.io">hello@awbs.io</a>
+        <a href="https://awbs.io" target="_blank" rel="noopener">awbs.io</a>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <span>© 2026 AWBS Network. Seluruh hak cipta dilindungi.</span>
+      <div class="footer__legal">
+        <a href="privacy.html">Kebijakan Privasi</a>
+        <a href="terms.html">Syarat &amp; Ketentuan</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

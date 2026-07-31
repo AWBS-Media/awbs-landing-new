@@ -2,22 +2,30 @@
    form.js — Validasi form lead (dwibahasa)
    ============================================================ */
 
+// Ganti dengan Web App URL hasil deploy Google Apps Script (lihat apps-script/Code.gs)
+const LEAD_FORM_ENDPOINT = "";
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("leadForm");
   if (!form) return;
 
   const success = document.getElementById("formSuccess");
+  const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
 
   const MSG = {
     id: {
       required: "Wajib diisi.",
       email: "Masukkan email yang valid.",
-      url: "Masukkan URL yang valid (mis. https://situs.com)."
+      url: "Masukkan URL yang valid (mis. https://situs.com).",
+      submitError: "Gagal mengirim. Silakan coba lagi.",
+      submitting: "Mengirim…"
     },
     en: {
       required: "This field is required.",
       email: "Enter a valid email address.",
-      url: "Enter a valid URL (e.g. https://site.com)."
+      url: "Enter a valid URL (e.g. https://site.com).",
+      submitError: "Something went wrong. Please try again.",
+      submitting: "Sending…"
     }
   };
   const msg = () => MSG[document.documentElement.lang] || MSG.id;
@@ -52,7 +60,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  form.addEventListener("submit", (e) => {
+  const setSubmitError = (text) => {
+    let box = form.querySelector(".lead-form__submit-error");
+    if (!text) {
+      if (box) box.textContent = "";
+      return;
+    }
+    if (!box) {
+      box = document.createElement("p");
+      box.className = "lead-form__submit-error";
+      box.setAttribute("role", "alert");
+      form.insertBefore(box, submitBtn ? submitBtn.nextSibling : null);
+    }
+    box.textContent = text;
+  };
+
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     let ok = true;
     let firstInvalid = null;
@@ -69,14 +92,40 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // TODO: hubungkan ke endpoint nyata (mis. fetch POST ke API / form handler).
-    // const data = Object.fromEntries(new FormData(form).entries());
-    // await fetch("/api/lead", { method: "POST", body: JSON.stringify(data) });
+    setSubmitError("");
+    const m = msg();
+    const data = Object.fromEntries(new FormData(form).entries());
+    data.lang = document.documentElement.lang || "id";
 
-    form.reset();
-    if (success) {
-      success.hidden = false;
-      success.scrollIntoView({ behavior: "smooth", block: "center" });
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.dataset.originalText = submitBtn.dataset.originalText || submitBtn.textContent;
+      submitBtn.textContent = m.submitting;
+    }
+
+    try {
+      if (LEAD_FORM_ENDPOINT) {
+        // text/plain menghindari CORS preflight yang tidak didukung Apps Script Web App
+        await fetch(LEAD_FORM_ENDPOINT, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(data)
+        });
+      }
+
+      form.reset();
+      if (success) {
+        success.hidden = false;
+        success.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    } catch (err) {
+      setSubmitError(m.submitError);
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = submitBtn.dataset.originalText;
+      }
     }
   });
 });

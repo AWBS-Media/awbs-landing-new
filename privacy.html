@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kebijakan Privasi — AWBS Network</title>
+  <meta name="description" content="Kebijakan privasi AWBS Network: data yang kami kumpulkan, cara kami menggunakannya, dan hak Anda sebagai publisher mitra." />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Terapkan tema sebelum paint pertama supaya tidak ada kedip putih (FOUC) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('awbs-theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) { /* localStorage diblokir: jatuh ke preferensi OS */ }
+    })();
+  </script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Lewati ke konten utama</a>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header id="header" class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__brand" aria-label="AWBS Network">
+        <img src="assets/logo.png" alt="AWBS Network" class="header__logo header__logo--light" width="150" height="34" />
+        <img src="assets/logo-white.png" alt="" aria-hidden="true" class="header__logo header__logo--dark" width="150" height="34" />
+      </a>
+
+      <nav class="nav" aria-label="Navigasi utama">
+        <ul class="nav__list" id="navList">
+          <li><a href="index.html#how" class="nav__link">Cara Kerja</a></li>
+          <li><a href="index.html#services" class="nav__link">Layanan</a></li>
+          <li><a href="index.html#why" class="nav__link">Kenapa AWBS</a></li>
+          <li><a href="index.html#proof" class="nav__link">Hasil</a></li>
+          <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Ganti tema gelap/terang" title="Ganti tema">
+          <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4.2" />
+            <path d="M12 2v2.6M12 19.4V22M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2 12h2.6M19.4 12H22M4.2 19.8l1.9-1.9M17.9 6.1l1.9-1.9" />
+          </svg>
+          <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20.5 14.2A8.4 8.4 0 1 1 9.8 3.5a6.6 6.6 0 0 0 10.7 10.7Z" />
+          </svg>
+        </button>
+        <a href="index.html#contact" class="btn btn--primary btn--sm header__cta">Dapatkan Evaluasi Revenue Gratis</a>
+        <button type="button" class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="navList">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ LEGAL: KEBIJAKAN PRIVASI ============ -->
+    <section class="section legal">
+      <div class="container legal__container">
+        <a href="index.html" class="legal__back">← Kembali ke beranda</a>
+        <span class="eyebrow">Legal</span>
+        <h1 class="legal__title">Kebijakan Privasi</h1>
+        <p class="legal__updated">Terakhir diperbarui: 31 Juli 2026</p>
+
+        <div class="legal__body">
+          <p>AWBS Network ("AWBS", "kami") menghormati privasi publisher, pengiklan, dan pengunjung situs yang menggunakan layanan kami. Kebijakan ini menjelaskan data apa saja yang kami kumpulkan, bagaimana kami menggunakannya, dan hak yang Anda miliki atas data tersebut.</p>
+
+          <h2>1. Data yang Kami Kumpulkan</h2>
+          <p>Kami mengumpulkan beberapa kategori data untuk mengoperasikan dan mengoptimasi layanan monetisasi iklan:</p>
+          <ul>
+            <li><strong>Data akun &amp; kontak</strong> — nama, email, dan detail properti (website) yang Anda berikan saat mendaftar atau mengisi formulir evaluasi.</li>
+            <li><strong>Data traffic &amp; performa iklan</strong> — metrik seperti impresi, klik, eCPM, fill rate, dan sumber demand, dikumpulkan melalui tag/SDK yang dipasang di properti Anda.</li>
+            <li><strong>Data teknis</strong> — alamat IP, jenis perangkat, browser, dan sinyal lain yang digunakan untuk deteksi Invalid Traffic (IVT) dan pengiriman iklan yang relevan.</li>
+            <li><strong>Data komunikasi</strong> — riwayat korespondensi dengan tim kami untuk keperluan dukungan dan evaluasi akun.</li>
+          </ul>
+
+          <h2>2. Bagaimana Kami Menggunakan Data</h2>
+          <ul>
+            <li>Mengoperasikan dan mengoptimasi lelang iklan real-time di seluruh jaringan demand kami.</li>
+            <li>Mendeteksi dan memblokir traffic tidak valid (IVT) untuk melindungi akun AdSense dan reputasi publisher mitra.</li>
+            <li>Menghitung dan melaporkan pendapatan secara transparan melalui dashboard analitik.</li>
+            <li>Berkomunikasi terkait status akun, evaluasi revenue, dan pembaruan layanan.</li>
+            <li>Memenuhi kewajiban hukum, termasuk permintaan dari otoritas yang berwenang.</li>
+          </ul>
+
+          <h2>3. Berbagi Data dengan Pihak Ketiga</h2>
+          <p>Kami membagikan data secara terbatas dengan mitra demand (jaringan iklan, DSP, dan pengiklan) semata-mata untuk keperluan penayangan dan pengukuran iklan. Kami tidak menjual data pribadi Anda. Mitra teknologi yang kami gunakan wajib mematuhi standar perlindungan data yang setara atau lebih ketat dari kebijakan ini.</p>
+
+          <h2>4. Cookie &amp; Teknologi Pelacakan</h2>
+          <p>Situs dan tag iklan kami dapat menggunakan cookie atau identifier serupa untuk mengukur performa iklan, mencegah penipuan traffic, dan meningkatkan relevansi iklan. Anda dapat mengatur preferensi cookie melalui pengaturan browser Anda; menonaktifkan cookie tertentu dapat memengaruhi performa monetisasi.</p>
+
+          <h2>5. Keamanan Data</h2>
+          <p>Kami menerapkan langkah teknis dan organisasional yang wajar untuk melindungi data dari akses, perubahan, atau pengungkapan yang tidak sah, termasuk enkripsi dalam transit dan pembatasan akses internal berbasis kebutuhan.</p>
+
+          <h2>6. Penyimpanan Data</h2>
+          <p>Data disimpan selama diperlukan untuk tujuan operasional, pelaporan, dan kepatuhan hukum. Data akun yang tidak aktif dapat dihapus atau dianonimkan setelah periode retensi yang wajar.</p>
+
+          <h2>7. Hak Anda</h2>
+          <p>Anda berhak meminta akses, koreksi, atau penghapusan data pribadi Anda, serta menarik persetujuan penggunaan data di mana relevan. Untuk mengajukan permintaan ini, hubungi kami melalui kontak di bawah.</p>
+
+          <h2>8. Perubahan Kebijakan</h2>
+          <p>Kami dapat memperbarui kebijakan ini dari waktu ke waktu. Perubahan material akan diinformasikan melalui email atau pemberitahuan di situs sebelum berlaku efektif.</p>
+
+          <h2>9. Kontak</h2>
+          <p>Pertanyaan seputar kebijakan privasi ini dapat disampaikan ke <a href="mailto:hello@awbs.io">hello@awbs.io</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="footer" class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo-white.png" alt="AWBS Network" class="footer__logo" width="160" height="35" />
+        <p class="footer__tagline">AdTech yang benar-benar bekerja. Insentif kami terikat pada hasil Anda.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Perusahaan</h4>
+        <p>PT Andiantara Sinergi Hagoon</p>
+        <p>Yogyakarta, Indonesia</p>
+      </div>
+      <div class="footer__col">
+        <h4>Tautan</h4>
+        <a href="index.html#services">Layanan</a>
+        <a href="index.html#why">Kenapa AWBS</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact">Kontak</a>
+      </div>
+      <div class="footer__col">
+        <h4>Hubungi Kami</h4>
+        <a href="mailto:hello@awbs.io">hello@awbs.io</a>
+        <a href="https://awbs.io" target="_blank" rel="noopener">awbs.io</a>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <span>© 2026 AWBS Network. Seluruh hak cipta dilindungi.</span>
+      <div class="footer__legal">
+        <a href="privacy.html">Kebijakan Privasi</a>
+        <a href="terms.html">Syarat &amp; Ketentuan</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -2,7 +2,7 @@
   "_note": "Reference English copy. The active strings used by the page live in js/i18n.js (I18N.en object) so it works over file://. Keep both in sync when editing.",
   "cta.primary": "Get a Free Revenue Evaluation",
   "hero.title": "Make more money from the traffic you already have.",
-  "hero.subtitle": "We optimize ad monetization for media publishers — and we win only when you do. No long-term contracts, no risk.",
+  "hero.subtitle": "We optimize ad monetization for media publishers, and we win only when you do. No long-term contracts, no risk.",
   "why.title": "We win only when you do.",
   "contact.title": "Find out how much revenue you're leaving on the table."
 }

@@ -3,13 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="meta.title">AWBS Network — Optimasi Monetisasi Iklan untuk Publisher</title>
-  <meta name="description" data-i18n="meta.description" content="AWBS membantu publisher media mengoptimasi performa iklan. Kami untung hanya ketika Anda untung — tanpa kontrak jangka panjang." />
+  <title data-i18n="meta.title">AWBS Network: Optimasi Monetisasi Iklan untuk Publisher</title>
+  <meta name="description" data-i18n="meta.description" content="AWBS membantu publisher media mengoptimasi performa iklan. Kami untung hanya ketika Anda untung, tanpa kontrak jangka panjang." />
   <link rel="icon" href="assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Terapkan tema sebelum paint pertama supaya tidak ada kedip putih (FOUC) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('awbs-theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) { /* localStorage diblokir: jatuh ke preferensi OS */ }
+    })();
+  </script>
   <script src="js/i18n.js" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/form.js" defer></script>
@@ -21,7 +32,8 @@
   <header id="header" class="header">
     <div class="container header__inner">
       <a href="#hero" class="header__brand" aria-label="AWBS Network">
-        <img src="assets/logo.png" alt="AWBS Network" class="header__logo" width="150" height="34" />
+        <img src="assets/logo.png" alt="AWBS Network" class="header__logo header__logo--light" width="150" height="34" />
+        <img src="assets/logo-white.png" alt="" aria-hidden="true" class="header__logo header__logo--dark" width="150" height="34" />
       </a>
 
       <nav class="nav" aria-label="Navigasi utama">
@@ -40,6 +52,15 @@
           <span class="lang-switch__sep" aria-hidden="true">/</span>
           <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
         </div>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Ganti tema gelap/terang" title="Ganti tema">
+          <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4.2" />
+            <path d="M12 2v2.6M12 19.4V22M4.2 4.2l1.9 1.9M17.9 17.9l1.9 1.9M2 12h2.6M19.4 12H22M4.2 19.8l1.9-1.9M17.9 6.1l1.9-1.9" />
+          </svg>
+          <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20.5 14.2A8.4 8.4 0 1 1 9.8 3.5a6.6 6.6 0 0 0 10.7 10.7Z" />
+          </svg>
+        </button>
         <a href="#contact" class="btn btn--primary btn--sm header__cta" data-i18n="cta.primary">Dapatkan Evaluasi Revenue Gratis</a>
         <button type="button" class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="navList">
           <span></span><span></span><span></span>
@@ -55,7 +76,7 @@
         <div class="hero__content">
           <span class="eyebrow" data-i18n="hero.eyebrow">AdTech yang Benar-Benar Bekerja</span>
           <h1 class="hero__title" data-i18n="hero.title">Hasilkan lebih banyak pendapatan dari traffic yang sudah Anda miliki.</h1>
-          <p class="hero__subtitle" data-i18n="hero.subtitle">Kami mengoptimasi monetisasi iklan publisher media — dan kami untung hanya ketika Anda untung. Tanpa kontrak jangka panjang, tanpa risiko.</p>
+          <p class="hero__subtitle" data-i18n="hero.subtitle">Kami mengoptimasi monetisasi iklan publisher media, dan kami untung hanya ketika Anda untung. Tanpa kontrak jangka panjang, tanpa risiko.</p>
           <div class="hero__actions">
             <a href="#contact" class="btn btn--primary btn--lg" data-i18n="cta.primary">Dapatkan Evaluasi Revenue Gratis</a>
             <a href="#how" class="btn btn--ghost btn--lg" data-i18n="hero.secondary">Lihat cara kerjanya</a>
@@ -143,11 +164,11 @@
       <div class="container">
         <div class="stats">
           <div class="stat">
-            <span class="stat__value">+47%</span>
+            <span class="stat__value">+200%</span>
             <span class="stat__label" data-i18n="trust.stat1">rata-rata kenaikan revenue dalam 90 hari pertama</span>
           </div>
           <div class="stat">
-            <span class="stat__value">120+</span>
+            <span class="stat__value">50+</span>
             <span class="stat__label" data-i18n="trust.stat2">publisher media &amp; konten bermitra</span>
           </div>
           <div class="stat">
@@ -161,10 +182,12 @@
         </div>
         <p class="trust__badges-label" data-i18n="trust.partners">Terintegrasi dengan demand premium global</p>
         <div class="badges">
-          <span class="badge">Google Certified Partner</span>
-          <span class="badge">AdX</span>
-          <span class="badge">Prebid</span>
-          <span class="badge">Premium SSP</span>
+          <span class="badge badge--logo"><img src="assets/adsense.svg" alt="Google AdSense" loading="lazy" /></span>
+          <span class="badge badge--logo"><img src="assets/admanager-final.png" alt="Google Ad Manager" loading="lazy" /></span>
+          <span class="badge badge--logo"><img src="assets/adsterra-final.svg" alt="Adsterra" loading="lazy" /></span>
+          <span class="badge badge--logo"><img src="assets/ezoic-final.png" alt="Ezoic" loading="lazy" /></span>
+          <span class="badge badge--logo"><img src="assets/propellerads-final.png" alt="PropellerAds" loading="lazy" /></span>
+          <span class="badge badge--logo"><img src="assets/mediavine-final.png" alt="Mediavine" loading="lazy" /></span>
         </div>
       </div>
     </section>
@@ -224,7 +247,7 @@
           <li class="step">
             <span class="step__num">3</span>
             <h3 class="step__title" data-i18n="how.s3.title">Anda hasilkan lebih</h3>
-            <p class="step__text" data-i18n="how.s3.text">Pantau kenaikan revenue lewat analytics transparan — kami untung saat Anda untung.</p>
+            <p class="step__text" data-i18n="how.s3.text">Pantau kenaikan revenue lewat analytics transparan. Kami untung saat Anda untung.</p>
           </li>
         </ol>
       </div>
@@ -243,28 +266,28 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="7"/><rect x="12" y="6" width="3" height="11"/><rect x="17" y="13" width="3" height="4"/></svg>
             </div>
             <h3 class="card__title" data-i18n="services.s1.title">Header Bidding</h3>
-            <p class="card__text" data-i18n="services.s1.text">Integrasi demand premium global sehingga lebih banyak pengiklan bersaing di tiap impresi — CPM dan pendapatan naik.</p>
+            <p class="card__text" data-i18n="services.s1.text">Integrasi demand premium global membuat lebih banyak pengiklan bersaing di tiap impresi, sehingga CPM dan pendapatan ikut naik.</p>
           </div>
           <div class="card service">
             <div class="card__icon card__icon--accent" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5v6c0 5-4 8-9 9-5-1-9-4-9-9V7z"/></svg>
             </div>
             <h3 class="card__title" data-i18n="services.s2.title">Proteksi IVT</h3>
-            <p class="card__text" data-i18n="services.s2.text">Filter canggih terhadap traffic invalid, berkualitas rendah, dan otomatis — menjaga kesehatan akun dan kualitas payout.</p>
+            <p class="card__text" data-i18n="services.s2.text">Filter canggih terhadap traffic invalid, berkualitas rendah, dan otomatis untuk menjaga kesehatan akun dan kualitas payout.</p>
           </div>
           <div class="card service">
             <div class="card__icon card__icon--accent" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
             </div>
             <h3 class="card__title" data-i18n="services.s3.title">Analytics Mendalam</h3>
-            <p class="card__text" data-i18n="services.s3.text">Lacak performa dan pendapatan lintas banyak dimensi, metrik, dan rentang tanggal — transparansi dan kontrol penuh.</p>
+            <p class="card__text" data-i18n="services.s3.text">Lacak performa dan pendapatan lintas banyak dimensi, metrik, dan rentang tanggal. Transparansi dan kontrol penuh.</p>
           </div>
           <div class="card service">
             <div class="card__icon card__icon--accent" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
             </div>
             <h3 class="card__title" data-i18n="services.s4.title">Layanan Optimasi</h3>
-            <p class="card__text" data-i18n="services.s4.text">Keahlian ad-ops langsung diterapkan pada setup Anda — pertumbuhan revenue berkelanjutan tanpa kerja ekstra.</p>
+            <p class="card__text" data-i18n="services.s4.text">Keahlian ad-ops langsung diterapkan pada setup Anda untuk pertumbuhan revenue berkelanjutan tanpa kerja ekstra.</p>
           </div>
         </div>
       </div>
@@ -276,11 +299,11 @@
         <div class="why__content">
           <span class="eyebrow eyebrow--light" data-i18n="why.eyebrow">Model Kemitraan</span>
           <h2 class="section__title" data-i18n="why.title">Kami untung hanya ketika Anda untung.</h2>
-          <p class="section__lead" data-i18n="why.lead">Begitulah seharusnya sebuah kemitraan. Insentif kita sejalan sepenuhnya — jadi fokus kami satu: menumbuhkan pendapatan Anda.</p>
+          <p class="section__lead" data-i18n="why.lead">Begitulah seharusnya sebuah kemitraan. Insentif kita sejalan sepenuhnya, jadi fokus kami satu: menumbuhkan pendapatan Anda.</p>
           <ul class="checklist">
-            <li data-i18n="why.p1">Berbasis performa — kami tumbuh saat Anda tumbuh</li>
+            <li data-i18n="why.p1">Berbasis performa, kami tumbuh saat Anda tumbuh</li>
             <li data-i18n="why.p2">Tanpa kontrak jangka panjang, tanpa lock-in</li>
-            <li data-i18n="why.p3">Transparan — Anda lihat dari mana tiap rupiah berasal</li>
+            <li data-i18n="why.p3">Transparan, Anda lihat dari mana tiap rupiah berasal</li>
             <li data-i18n="why.p4">Spesialis ad-ops sungguhan, bukan sekadar tool</li>
           </ul>
           <a href="#contact" class="btn btn--accent btn--lg" data-i18n="cta.primary">Dapatkan Evaluasi Revenue Gratis</a>
@@ -370,19 +393,18 @@
         </div>
         <div class="cards cards--3">
           <figure class="testimonial">
-            <blockquote data-i18n="proof.t1.quote">"Revenue iklan kami naik lebih dari 40% dalam dua bulan, dan kami tidak perlu repot sama sekali."</blockquote>
-            <figcaption><strong data-i18n="proof.t1.name">Rina W.</strong><span data-i18n="proof.t1.role">Head of Revenue, [Media Publisher]</span></figcaption>
+            <blockquote data-i18n="proof.t1.quote">"Revenue iklan kami naik lebih dari 200% dalam dua bulan, dan kami tidak perlu repot sama sekali."</blockquote>
+            <figcaption><strong data-i18n="proof.t1.name">Budi H.</strong><span data-i18n="proof.t1.role">Head of Revenue, rakyatpress.com</span></figcaption>
           </figure>
           <figure class="testimonial">
             <blockquote data-i18n="proof.t2.quote">"Akhirnya ada partner iklan yang transparan. Kami bisa melihat persis dari mana tiap rupiah berasal."</blockquote>
-            <figcaption><strong data-i18n="proof.t2.name">Andi S.</strong><span data-i18n="proof.t2.role">Founder, [News Site]</span></figcaption>
+            <figcaption><strong data-i18n="proof.t2.name">Andi S.</strong><span data-i18n="proof.t2.role">Founder, sekali.id</span></figcaption>
           </figure>
           <figure class="testimonial">
             <blockquote data-i18n="proof.t3.quote">"Proteksi IVT-nya saja sudah menyelamatkan akun AdSense kami. Sangat direkomendasikan."</blockquote>
-            <figcaption><strong data-i18n="proof.t3.name">Dewi K.</strong><span data-i18n="proof.t3.role">Operations Lead, [Content Network]</span></figcaption>
+            <figcaption><strong data-i18n="proof.t3.name">Rizky P.</strong><span data-i18n="proof.t3.role">Operations Lead, tempuh.net</span></figcaption>
           </figure>
         </div>
-        <p class="proof__disclaimer" data-i18n="proof.disclaimer">*Angka dan testimoni di atas adalah data placeholder untuk keperluan ilustrasi.</p>
       </div>
     </section>
 
@@ -398,28 +420,24 @@
 
         <div class="faq__list">
           <details class="faq__item" open>
-            <summary><span data-i18n="faq.q1">Apa yang termasuk dalam evaluasi revenue gratis?</span><i aria-hidden="true"></i></summary>
-            <div class="faq__answer"><p data-i18n="faq.a1">Kami meninjau setup iklan, pola traffic, peluang demand, dan area yang berpotensi menahan pendapatan. Anda mendapat gambaran peluang dan rekomendasi awal tanpa kewajiban bermitra.</p></div>
+            <summary><span data-i18n="faq.q1">Bagaimana skema partnership dengan AWBS Network?</span><i aria-hidden="true"></i></summary>
+            <div class="faq__answer"><p data-i18n="faq.a1">Kami bekerja sama dengan pemilik website untuk mengembangkan potensi monetisasi melalui strategi optimasi traffic dan teknologi periklanan. Seluruh proses dikelola oleh tim kami, sehingga partner dapat tetap fokus pada pengelolaan website utamanya.</p></div>
           </details>
           <details class="faq__item">
-            <summary><span data-i18n="faq.q2">Apakah integrasi AWBS akan mengganggu website?</span><i aria-hidden="true"></i></summary>
-            <div class="faq__answer"><p data-i18n="faq.a2">Integrasi dirancang bertahap dan diawasi oleh tim ad-ops. Kami menguji implementasi, performa iklan, dan pengalaman pengguna sebelum melakukan optimasi lebih lanjut.</p></div>
+            <summary><span data-i18n="faq.q2">Apakah website utama saya akan terdampak?</span><i aria-hidden="true"></i></summary>
+            <div class="faq__answer"><p data-i18n="faq.a2">Tidak. Implementasi dilakukan melalui subdomain dengan server yang terpisah dari website utama. Pendekatan ini dirancang agar website utama tetap berjalan seperti biasa tanpa mengganggu performa maupun operasionalnya.</p></div>
           </details>
           <details class="faq__item">
-            <summary><span data-i18n="faq.q3">Publisher seperti apa yang cocok bekerja sama dengan AWBS?</span><i aria-hidden="true"></i></summary>
-            <div class="faq__answer"><p data-i18n="faq.a3">Kami paling relevan untuk publisher media dan konten dengan traffic aktif yang ingin meningkatkan yield, memperluas demand, atau menjalankan ad-ops tanpa membangun tim internal sendiri.</p></div>
+            <summary><span data-i18n="faq.q3">Siapa yang menanggung biaya operasional?</span><i aria-hidden="true"></i></summary>
+            <div class="faq__answer"><p data-i18n="faq.a3">Seluruh biaya operasional, termasuk infrastruktur, pengelolaan kampanye, dan kebutuhan teknis lainnya ditanggung oleh AWBS Network. Partner tidak perlu mengeluarkan biaya tambahan untuk menjalankan kerja sama ini.</p></div>
           </details>
           <details class="faq__item">
-            <summary><span data-i18n="faq.q4">Bagaimana model biaya atau bagi hasilnya?</span><i aria-hidden="true"></i></summary>
-            <div class="faq__answer"><p data-i18n="faq.a4">Model kerja sama berbasis performa dan dibahas transparan setelah evaluasi. Struktur komersial disesuaikan dengan kondisi properti, stack iklan, dan ruang optimasi masing-masing publisher.</p></div>
+            <summary><span data-i18n="faq.q4">Bagaimana transparansi hasil kerja sama?</span><i aria-hidden="true"></i></summary>
+            <div class="faq__answer"><p data-i18n="faq.a4">Kami mengutamakan transparansi. Seluruh data terkait performa dan pendapatan dapat dipantau sesuai mekanisme yang telah disepakati bersama, sehingga partner memiliki visibilitas yang jelas terhadap hasil kolaborasi.</p></div>
           </details>
           <details class="faq__item">
-            <summary><span data-i18n="faq.q5">Apakah ada kontrak jangka panjang?</span><i aria-hidden="true"></i></summary>
-            <div class="faq__answer"><p data-i18n="faq.a5">Tidak ada lock-in jangka panjang. Ruang lingkup, target, akses data, dan mekanisme penghentian kerja sama disepakati dengan jelas sejak awal.</p></div>
-          </details>
-          <details class="faq__item">
-            <summary><span data-i18n="faq.q6">Apakah saya tetap bisa melihat data performa iklan?</span><i aria-hidden="true"></i></summary>
-            <div class="faq__answer"><p data-i18n="faq.a6">Ya. Transparansi adalah bagian utama kemitraan: Anda tetap dapat memantau metrik, tren pendapatan, dan dampak optimasi melalui reporting yang disepakati bersama.</p></div>
+            <summary><span data-i18n="faq.q5">Apa yang membuat AWBS Network berbeda?</span><i aria-hidden="true"></i></summary>
+            <div class="faq__answer"><p data-i18n="faq.a5">AWBS Network menggabungkan pengalaman tim digital advertising, pemanfaatan Artificial Intelligence, serta strategi optimasi berbasis data untuk membantu meningkatkan kualitas traffic dan potensi monetisasi website secara berkelanjutan.</p></div>
           </details>
         </div>
       </div>
@@ -430,7 +448,7 @@
       <div class="container contact__inner">
         <div class="contact__copy">
           <h2 class="section__title" data-i18n="contact.title">Cari tahu berapa banyak pendapatan yang Anda tinggalkan.</h2>
-          <p class="section__lead" data-i18n="contact.lead">Dapatkan evaluasi revenue gratis untuk situs Anda. Tanpa biaya, tanpa komitmen — hanya insight yang bisa langsung ditindaklanjuti.</p>
+          <p class="section__lead" data-i18n="contact.lead">Dapatkan evaluasi revenue gratis untuk situs Anda. Tanpa biaya, tanpa komitmen. Hanya insight yang bisa langsung ditindaklanjuti.</p>
         </div>
         <form class="lead-form" id="leadForm" novalidate>
           <div class="field">
@@ -460,7 +478,7 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <img src="assets/logo-white.png" alt="AWBS Network" class="footer__logo" width="160" height="35" />
-        <p class="footer__tagline" data-i18n="footer.tagline">AdTech yang benar-benar bekerja. Kami menang hanya ketika Anda menang.</p>
+        <p class="footer__tagline" data-i18n="footer.tagline">AdTech yang benar-benar bekerja. Insentif kami terikat pada hasil Anda.</p>
       </div>
       <div class="footer__col">
         <h4 data-i18n="footer.company.title">Perusahaan</h4>
@@ -483,8 +501,8 @@
     <div class="footer__bottom container">
       <span data-i18n="footer.copyright">© 2026 AWBS Network. Seluruh hak cipta dilindungi.</span>
       <div class="footer__legal">
-        <a href="#" data-i18n="footer.privacy">Kebijakan Privasi</a>
-        <a href="#" data-i18n="footer.terms">Syarat &amp; Ketentuan</a>
+        <a href="privacy.html" data-i18n="footer.privacy">Kebijakan Privasi</a>
+        <a href="terms.html" data-i18n="footer.terms">Syarat &amp; Ketentuan</a>
       </div>
     </div>
   </footer>

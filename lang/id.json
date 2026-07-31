@@ -2,7 +2,7 @@
   "_note": "Referensi teks Bahasa Indonesia. Sumber teks aktif yang dipakai halaman ada di js/i18n.js (objek I18N.id) agar berfungsi saat dibuka via file://. Jaga agar kedua file ini tetap sinkron bila diedit.",
   "cta.primary": "Dapatkan Evaluasi Revenue Gratis",
   "hero.title": "Hasilkan lebih banyak pendapatan dari traffic yang sudah Anda miliki.",
-  "hero.subtitle": "Kami mengoptimasi monetisasi iklan publisher media — dan kami untung hanya ketika Anda untung. Tanpa kontrak jangka panjang, tanpa risiko.",
+  "hero.subtitle": "Kami mengoptimasi monetisasi iklan publisher media, dan kami untung hanya ketika Anda untung. Tanpa kontrak jangka panjang, tanpa risiko.",
   "why.title": "Kami untung hanya ketika Anda untung.",
   "contact.title": "Cari tahu berapa banyak pendapatan yang Anda tinggalkan."
 }
